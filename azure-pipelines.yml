@@ -1,0 +1,18 @@
+jobs:
+- job: VS2019
+  pool:
+    vmImage: 'windows-2019'
+
+  steps:
+  - script: 'echo "##vso[task.prependpath]C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin;"'
+  - script: build
+    displayName: 'build'
+
+- job: VS2017
+  pool:
+    vmImage: 'vs2017-win2016'
+
+  steps:
+  - script: 'echo "##vso[task.prependpath]C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/MSBuild/15.0/Bin;"'
+  - script: build
+    displayName: 'build'

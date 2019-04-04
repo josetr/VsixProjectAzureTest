@@ -1,0 +1,1 @@
+VsixProjectAzureVS2019Test
